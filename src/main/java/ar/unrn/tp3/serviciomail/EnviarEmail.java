@@ -9,7 +9,7 @@ public class EnviarEmail implements EnviarEmailInterfase {
         try {
             new Email(empleado.getEmail(), "Felicitaciones", "¡Feliz cumpleaños!").enviar();
         }catch (SmtpException e){
-            throw new RuntimeException(" ");
+            throw new RuntimeException("Error!! ", e);
         }
     }
 }

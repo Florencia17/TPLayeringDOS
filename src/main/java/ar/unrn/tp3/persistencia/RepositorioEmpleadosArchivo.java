@@ -32,7 +32,7 @@ public class RepositorioEmpleadosArchivo implements RepositorioEmpleado {
                 empleados.add(e);
             }
         } catch (FileNotFoundException e) {
-            e.printStackTrace();
+            throw new RuntimeException("Error!!!", e);
         }
         return empleados;
     }
